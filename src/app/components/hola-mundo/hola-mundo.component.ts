@@ -13,4 +13,16 @@ export class HolaMundoComponent {
     public titulo : string = "Hola Mundo";
     color : string = 'blue';
     alumnos: string[] = ['Juan', 'Pedro', 'Maria', 'Jose', 'Javier'];
+    mostrarDiv : boolean = false;
+
+    alternarDivs() {
+      this.mostrarDiv = !this.mostrarDiv;
+    }
+
+    agregarAlumno(alumno : string) {
+      if (alumno.length > 0) {
+        this.alumnos.push(alumno);
+      }
+    }
+
 }
